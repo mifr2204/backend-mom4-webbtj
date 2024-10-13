@@ -1,0 +1,104 @@
+Källkoden ska publiceras till ett Github (eller annan webbtjänst för Git-repos) 
+repository.
+Det ska finnas en README-fil som ger en beskrivning av din webbapplikation.
+Publicering eller video-demonstration
+Det finns alternativ för redovisning av uppgiften:
+
+Publicera din webbsida och webbtjänst på publikt tillgänglig webbhost.
+Var noga med att testköra efter publicering, och säkerställ att allting 
+fungerar korrekt.
+Skapa en video-demonstration av din lösning där du visar och berättar
+ hur denna fungerar. Video-demonstrationen bör vara max fem minuter lång.
+Inlämning
+Moment 4 lämnas in som webblänkar till online git-repository för vardera lösning:
+
+en till Uppgift 1 för din webbtjänst,
+och en till Uppgift 2 för din webbplats.
+Båda dessa ska innehålla en README-fil med beskrivning av 
+lösningen samt eventuellt webblänk(ar) till publicerade laborationer 
+för testkörning.
+
+Bifoga även webblänkar till publicerad webbtjänst och webbplats 
+alternativt länk till video-demonstration som kommentar i inlämningslådan.
+
+
+
+
+
+
+
+---Användarkonton ska lagras i en databas, 
+---där du själv väljer vilken typ du vill använda - 
+---relationsdatas eller NoSQL-databas.
+
+---Lämpliga fält att lagra i databasen är:
+
+---Användarnamn ("username")
+---Lösenord ("password")
+---Datum för registrering ("account_created" eller motsvarande)
+---Det kan även vara lämpligt att lagra andra saker så som e-post-adress, användarens fullständiga namn etctera. Du väljer själv vad du tycker passar för din lösning.
+
+---Lösenord skall vara krypterade (hashade) i databasen, 
+---så att de inte kan läsas av obehöriga.
+
+Källkoden ska publiceras till ett Github (eller annan webbtjänst för Git) 
+repository.
+En README-fil ska finnas i ditt repo som dokumenterar din webbtjänst, 
+samt inkluderar URI's (webblänkar) för att använda CRUD. Här är ett exempel: 
+README för API
+
+
+----Du skall även använda JWT's (JSON Web Token) 
+---för sessionshantering för att förhindra obehörig åtkomst till resurser.
+Vid inloggning ska en JWT skapas och skickas till klienten. 
+Denna JWT skall sedan användas för att autentisera användaren 
+vid varje anrop till webbtjänsten.
+
+Du skall skapa en webbtjänst som ger möjlighet att skapa användarkonton, 
+samt göra inloggning via denna.
+
+Skyddat data
+Skapa (minst) en resurs med valfritt data som är skyddad med autentisering, 
+och som kräver att användaren är inloggad för att kunna nås.
+Denna kan vara av valfritt innehåll - 
+om du vill återanvända någon av dina tidigare resurser så går det bra.
+
+Funktionella krav
+Följande funktionalitet ska finnas i din lösning för godkänt:
+
+---Skapa användarkonto.
+---Logga in med ovan användarkonto.
+Autentisering med hjälp av JWT.
+Autentisera användare vid anrop till skyddat data i webbtjänsten.
+Minst en resurs som kräver autentisering.
+
+Uppgift 2
+Skapa en webbplats som använder Fetch API för att konsumera din
+ webbtjänst 
+från Uppgift 1.
+
+Det ska finnas formulär för att kunna registrera användarkonton, 
+samt att kunna logga in med dessa.
+
+Vid lyckad inloggning kan JWT'n sparas i webbläsarens sessionsStorage 
+(alternativt localStorage), och användas för att autentisera användaren 
+vid anrop till skyddade resurser i webbtjänsten.
+
+Uppgift 1
+
+Gör (minst) en undersida i webbplatsen som kräver att användaren är 
+inloggad för att kunna visas, och läs ut data från webbtjänsten.
+
+Funktionella krav
+Följande funktionalitet ska finnas i din lösning för godkänt:
+
+Webbplatsen ska använda Fetch API för att registrera konton samt 
+logga in (POST-anrop är lämpliga för båda dessa delar).
+Lösningen ska skapas med HTML, CSS och JavaScript. 
+Använd med fördel en automatiserad utvecklingsmiljö från tidigare kurs. 
+Och SASS/SCSS är ok att använda.
+Webbplatsen ska använda JWT för att autentisera användaren vid anrop 
+till skyddade resurser i webbtjänsten. Dessa ska lagras på lämpligt 
+sätt i webbläsaren.
+Webbplatsen ska ha (minst) en undersida som kräver att användaren är 
+inloggad för att kunna visas.
