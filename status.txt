@@ -25,7 +25,7 @@ alternativt länk till video-demonstration som kommentar i inlämningslådan.
 
 
 
-
+pre-set databas? install
 
 ---Användarkonton ska lagras i en databas, 
 ---där du själv väljer vilken typ du vill använda - 

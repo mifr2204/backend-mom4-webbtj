@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-//schema workplace
+//schema Workplace
 const WorkplaceSchema = new mongoose.Schema({
     companyname: {
         type: String,
