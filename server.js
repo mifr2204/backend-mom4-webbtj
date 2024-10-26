@@ -67,7 +67,7 @@ app.delete("/workplaces/:id", authenticateToken, async(req, res) => {
         res.json({message: "The workplace is deleted ", id});    
     
     }catch(error) {
-        //console.log(error);
+      
         return res.status(400).json(error);
     };
 });
@@ -109,16 +109,3 @@ app.put("/workplaces/:id", authenticateToken, async(req, res) => {
        return res.status(500).json(error);
     };
 });
-
-//app.use(express.json());
-//app.use(cors());
-
-/*
-
-
-
-
-
-
-
-*/
