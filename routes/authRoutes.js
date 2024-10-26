@@ -34,6 +34,10 @@ router.post("/register", async(req, res) => {
         if(userExcists) {
             return res.status(401).json({error: "Username is taken"});
         }
+        const emailExcists = await User.findOne({ email });
+        if(emailExcists) {
+            return res.status(401).json({error: "email is taken"});
+        }
 
         const user = new User({ firstname, lastname, email, username, password });
         await user.save();
